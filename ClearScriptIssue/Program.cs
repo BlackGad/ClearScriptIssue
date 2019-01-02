@@ -32,6 +32,7 @@ namespace ClearScriptIssue
                 //TODO: Does not work (Issue 2)
                 //var simpleNotTypedArray = engine.Evaluate("['a','b']");
                 //TODO: test object is already defined. But let was used in code above (Issue 3)
+                Console.WriteLine($"Test variable after first evaluate run: {engine.Script.test}");
                 //var simpleNotTypedArray = engine.Evaluate("let test = ['a','b']; test;");
                 var simpleNotTypedArray = engine.Evaluate("let test2 = ['a','b']; test2;");
                 serializedSimpleNotTypedArray = engine.FromScriptObject(simpleNotTypedArray);
